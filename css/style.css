@@ -1,0 +1,98 @@
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+body{
+
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    background: #fff;
+}
+
+h2{
+    color: #31A5AC;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+.container{
+    
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ margin-bottom: 20px;
+
+
+
+}
+
+.banner img{
+
+    height: 700px;
+    width: 600px;
+ 
+    border: 1px solid  #E5E5E5 ;
+    
+}
+.income-expense{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E5E5;
+    padding: 20px;
+
+    
+}
+.income-expense p{
+    padding: 10px 0;
+}
+.income-expense ul li{
+
+    list-style: none;
+    padding: 30px 0;
+    text-align: right;
+}
+
+.primary-button{
+    color: #fff;
+    background-color: #59A5FF;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.primary-button:active{
+   background-color:#31A5AC;
+   background-image: linear-gradient(90deg,rgb(14, 100, 14), #59A5FF  );
+  
+
+}
+
+/* responsive */
+
+@media (max-width:1020px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .banner{
+        /* align-items: center; */
+        margin: 0 auto;
+    }
+}
+
+
+/* footer */
+

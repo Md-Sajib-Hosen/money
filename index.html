@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+<body>
+    <header>
+        <h2> Money Manager  </h2>
+        
+    </header>
+    <main>
+       
+        <div class="container">
+            <div class="banner">
+                <img src="image/money-1.webp" alt="">
+            </div>
+            <div class="income-expense">
+                
+                <ul>
+                    <h3>Income</h3>
+                    <li> Income: <input type="number" name="" id="income-field"></li>
+                    <h3>Expense</h3>
+                    <li>Food <input type="number" name="" id="food-field"> </li>
+                    <li>Rent <input type="number" name="" id="rent-field"> </li>
+                    <li>Clothes: <input type="number" name="" id="clothes-field"></li>
+                    
+                </ul>
+                <button class="primary-button" id="calculate-btn">
+                    calculate
+                </button>
+
+                <p id="total-expense">Total Expense: <span id="expenseAmount"></span> </p>
+                <p id="balance">Balance: <span id="balance-amount"></span> </p>
+                <div class="saving">
+                    Save: <input type="number" name="" id="savings-parcentange">% <button id="savings-btn" class="primary-button"> Save</button>
+                </div>
+
+                <p>Savings Amount: <span id="saving-amount"></span></p>
+                <p>Remaining Balance: <span id="remaining-balance"></span> </p>
+
+            </div>
+        </div>
+        
+    </main>
+    
+
+<script src="./js/main.js"></script>
+</body>
+</html>
