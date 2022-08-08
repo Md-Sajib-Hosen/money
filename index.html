@@ -1,57 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money Manager</title>
-    <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-</head>
-<body>
+  <body>
+    <!-- heading start -->
     <header>
-       <nav> <h1> M<span class="stylish-word">o</span>ney Manag<span class="stylish-word">e</span>r</h1></nav>
-        
+      <nav>
+        <h1>
+          M<span class="stylish-word">o</span>ney Manag<span
+            class="stylish-word"
+            >e</span
+          >r
+        </h1>
+      </nav>
     </header>
+    <!-- Header Ends -->
+    <!-- Main Starts -->
     <main>
-       
-        <div class="container">
-            <div class="banner">
-                <img src="image/money-1.webp" alt="">
-            </div>
-            <div class="income-expense">
-                
-                <form action="">
-                    <ul>
-                        <h3>Income</h3>
-                        <li> Income: <input type="number" name="" id="income-field" required></li>
-                        <h3>Expense</h3>
-                        <li>Food <input type="number" name="" id="food-field"> </li>
-                        <li>Rent <input type="number" name="" id="rent-field"> </li>
-                        <li>Clothes: <input type="number" name="" id="clothes-field"></li>
-                        
-                    </ul>
-                </form>
-                <button class="primary-button" id="calculate-btn">
-                    calculate
-                </button>
-
-                <p id="total-expense">Total Expense: <span id="expenseAmount"></span> </p>
-                <p id="balance">Balance: <span id="balance-amount"></span> </p>
-                <div class="saving">
-                    Save: <input type="number" name="" id="savings-parcentange">% <button id="savings-btn" class="primary-button"> Save</button>
-                </div>
-
-                <p>Savings Amount: <span id="saving-amount"></span></p>
-                <p>Remaining Balance: <span id="remaining-balance"></span> </p>
-
-            </div>
+      <div class="container">
+        <!-- Banner part -->
+        <div class="banner">
+          <img src="image/money-1.webp" alt="" />
         </div>
-        
-    </main>
-    
+        <!-- Banner part Ends -->
+        <div class="income-expense">
+          <!-- Expense and Income -->
+          <form action="">
+            <ul>
+              <h3>Income</h3>
+              <li>
+                Income:
+                <input type="number" name="" id="income-field" required />
+              </li>
+              <h3>Expense</h3>
+              <li>Food: <input type="number" name="" id="food-field" /></li>
+              <li>Rent: <input type="number" name="" id="rent-field" /></li>
+              <li>
+                Clothes: <input type="number" name="" id="clothes-field" />
+              </li>
+            </ul>
+          </form>
+          <!-- Expense and Income Ends -->
+          <button class="primary-button" id="calculate-btn">calculate</button>
 
-<script src="./js/main.js"></script>
-</body>
+          <p id="total-expense">
+            Total Expense: <span id="expenseAmount"></span>
+          </p>
+          <p id="balance">Balance: <span id="balance-amount"></span></p>
+          <div class="saving">
+            Save: <input type="number" name="" id="savings-parcentange" />%
+            <button id="savings-btn" class="primary-button">Save</button>
+          </div>
+
+          <p>Savings Amount: <span id="saving-amount"></span></p>
+          <p>Remaining Balance: <span id="remaining-balance"></span></p>
+        </div>
+      </div>
+    </main>
+    <!-- Main Ends -->
+
+    <script src="./js/main.js"></script>
+  </body>
 </html>

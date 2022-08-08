@@ -14,41 +14,41 @@ function getTheValue() {
 
   const clothesExpenseField = document.getElementById('clothes-field');
   const clothesExpense = parseFloat(clothesExpenseField.value)
-
+  //Total Expense
   const totalExpense = (foodExpense + rentExpense + clothesExpense);
 
   const getExpense = document.getElementById('expenseAmount');
-
+  //Getting Balance 
   const getBalance = document.getElementById('balance-amount');
 
-      //Checking Condition or Validity 
-  if(Income < 0 || isNaN(Income)){
+  //Checking Condition or Validity 
+  if (Income < 0 || isNaN(Income)) {
 
     getIncomeField.value = ' ';
-    return window.alert('put the valid income')
+    return window.alert('Put the valid Income')
   }
 
-  else if(foodExpense < 0 || isNaN(foodExpense)){
+  else if (foodExpense < 0 || isNaN(foodExpense)) {
     foodExpenseField.value = ' ';
 
-    return window.alert('please put valid food expense')
+    return window.alert('Please put valid Food Expense')
   }
-  else if(rentExpense < 0 || isNaN(rentExpense)){
+  else if (rentExpense < 0 || isNaN(rentExpense)) {
     rentExpenseField.value = '';
-    return window.alert('put valid rent expense')
-    
-  }
-  else if(clothesExpense < 0 || isNaN(clothesExpense)){
+    return window.alert('Put valid rent Expense')
 
-    clothesExpenseField.value =' ';
-    return window.alert('put valid clothes expense')
+  }
+  else if (clothesExpense < 0 || isNaN(clothesExpense)) {
+
+    clothesExpenseField.value = ' ';
+    return window.alert('Put valid clothes Expense')
   }
 
-  else if(totalExpense > Income){
+  else if (totalExpense > Income) {
     getExpense.innerText = '';
     getBalance.innerText = ' ';
 
-    return window.alert('increase your income')
+    return window.alert('Increase your Income')
   }
 
 
@@ -68,66 +68,58 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
   getTheValue();
 })
 
-
-
-//save button event handler
+//savings  button event handler
 
 document.getElementById('savings-btn').addEventListener('click', function () {
 
 
-function saveButton(){
+  function saveButton() {
 
-  
-  const getParcentage = document.getElementById('savings-parcentange');
-  const parcentangeValue = parseFloat(getParcentage.value);
 
-  // balance
+    const getParcentage = document.getElementById('savings-parcentange');
+    const parcentangeValue = parseFloat(getParcentage.value);
 
-  const getBalance = document.getElementById('balance-amount').innerText;
-  const balance = parseFloat(getBalance);
+    // balance
 
-  // set savings amount 
+    const getBalance = document.getElementById('balance-amount').innerText;
+    const balance = parseFloat(getBalance);
 
-  const savingAmount = balance * parcentangeValue / 100;
-  //get savings
-  const getSavings = document.getElementById('saving-amount');
+    // set savings amount 
 
-  const remainingBalance = balance - savingAmount;
-  const getRemainingBalance = document.getElementById('remaining-balance');
+    const savingAmount = balance * parcentangeValue / 100;
+    //get savings
+    const getSavings = document.getElementById('saving-amount');
+
+    const remainingBalance = balance - savingAmount;
+    const getRemainingBalance = document.getElementById('remaining-balance');
 
     //Checking condition or Validity
-  if( parcentangeValue < 0 || isNaN(parcentangeValue)){
-    getSavings.innerText = '';
-    getParcentage.value = ' ';
-    getRemainingBalance.innerText = ' ';
+    if (parcentangeValue < 0 || isNaN(parcentangeValue)) {
+      getSavings.innerText = '';
+      getParcentage.value = ' ';
+      getRemainingBalance.innerText = ' ';
 
-    return window.alert('put a valid savings amount')
+      return window.alert('Put a valid Savings Amount')
+
+    }
+
+    else if (savingAmount > balance || isNaN(savingAmount)) {
+      getSavings.innerText = '';
+      getParcentage.value = ' ';
+      getRemainingBalance.innerText = ' ';
+
+      return window.alert('Increase your Balance to save more')
+    }
+
+    getSavings.innerText = savingAmount;
+
+    //set ramining balance 
+
+    getRemainingBalance.innerText = remainingBalance;
 
   }
 
-  else if(savingAmount > balance || isNaN(savingAmount) ){
-
-  //   const getSavings = document.getElementById('saving-amount');
-   getSavings.innerText = '';
-   getParcentage.value = ' ';
-   getRemainingBalance.innerText = ' ';
-
-    return window.alert('increase your balance to save more')
-  }
-
-  // const getSavings = document.getElementById('saving-amount');
-  getSavings.innerText = savingAmount;
-
-  // remaining balance
-
- 
-  //set ramining balance 
- 
-  getRemainingBalance.innerText = remainingBalance;
-
-}
-
-saveButton()
+  saveButton()
 
 })
 
